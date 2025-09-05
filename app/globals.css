@@ -1,2 +1,21 @@
+/* Import Google Fonts harus paling atas */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Import Tailwind */
 @import "tailwindcss";
 
+/* Atur font default */
+@theme {
+  --font-sans: 'Montserrat', system-ui, sans-serif;
+  --font-alt: 'Roboto Condensed', sans-serif;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(10deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}

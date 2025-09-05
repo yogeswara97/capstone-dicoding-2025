@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "title": "What is Pneumonia?",
+    "slug": "what-is-pneumonia",
+    "shortDesc": "An infection that inflames the air sacs in the lungs.",
+    "desc": "<p>Pneumonia is an infection that inflames the air sacs in one or both lungs. The air sacs may fill with fluid or pus (purulent material), causing cough with phlegm or pus, fever, chills, and difficulty breathing.</p><h2>Types of Pneumonia</h2><p>Pneumonia can be classified in several ways. One common classification system is based on where you acquired the infection.</p>",
+    "image": "https://i.ibb.co/XYZ/pneumonia1.png",
+    "author": "Dr. Sarah Johnson",
+    "publishDate": "March 15, 2024",
+    "readTime": "5 min read",
+    "tags": ["Pneumonia", "Respiratory Health", "Medical Information"],
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Early Symptoms of Pneumonia",
+    "slug": "early-symptoms-of-pneumonia",
+    "shortDesc": "Cough, fever, and difficulty breathing.",
+    "desc": "<p>Recognizing the early symptoms of pneumonia is crucial for timely treatment. Symptoms can vary depending on the type of germ causing the infection.</p><h2>Common Early Symptoms</h2><ul><li>Cough with phlegm</li><li>Fever and chills</li><li>Shortness of breath</li><li>Chest pain</li></ul>",
+    "image": "https://i.ibb.co/XYZ/pneumonia2.png",
+    "author": "Dr. Michael Chen",
+    "publishDate": "March 12, 2024",
+    "readTime": "4 min read",
+    "tags": ["Symptoms", "Early Detection", "Health Awareness"],
+    "featured": false
+  },
+  {
+    "id": 3,
+    "title": "How to Prevent Pneumonia",
+    "slug": "how-to-prevent-pneumonia",
+    "shortDesc": "Healthy lifestyle & vaccines reduce risks.",
+    "desc": "<p>Prevention is better than cure. Vaccines, hand hygiene, avoiding smoke, and a healthy lifestyle can significantly reduce your risk.</p>",
+    "image": "https://i.ibb.co/XYZ/pneumonia3.png",
+    "author": "Dr. Emily Rodriguez",
+    "publishDate": "March 10, 2024",
+    "readTime": "6 min read",
+    "tags": ["Prevention", "Vaccination", "Healthy Living"],
+    "featured": true
+  },
+  {
+    "id": 4,
+    "title": "Pneumonia Treatment Options",
+    "slug": "pneumonia-treatment-options",
+    "shortDesc": "From antibiotics to home care remedies.",
+    "desc": "<p>Treatment involves curing the infection and preventing complications. Some cases can be treated at home with medications, rest, and hydration.</p>",
+    "image": "https://i.ibb.co/XYZ/pneumonia4.png",
+    "author": "Dr. James Wilson",
+    "publishDate": "March 8, 2024",
+    "readTime": "7 min read",
+    "tags": ["Treatment", "Recovery", "Medication"],
+    "featured": false
+  },
+  {
+    "id": 5,
+    "title": "Living with Pneumonia Recovery",
+    "slug": "living-with-pneumonia-recovery",
+    "shortDesc": "Tips for a smooth recovery post-treatment.",
+    "desc": "<p>Recovery can take days to weeks. Rest, hydration, nutritious food, and following your doctor's advice are key.</p>",
+    "image": "https://i.ibb.co/XYZ/pneumonia5.png",
+    "author": "Dr. Lisa Park",
+    "publishDate": "March 5, 2024",
+    "readTime": "5 min read",
+    "tags": ["Recovery", "Lifestyle", "Post-Treatment"],
+    "featured": false
+  },
+  {
+    "id": 6,
+    "title": "Pneumonia in Children",
+    "slug": "pneumonia-in-children",
+    "shortDesc": "Special care for young patients.",
+    "desc": "<p>Recognizing signs early and proper treatment are essential for pediatric pneumonia cases.</p>",
+    "image": "https://i.ibb.co/XYZ/pneumonia6.png",
+    "author": "Dr. Amanda Foster",
+    "publishDate": "March 1, 2024",
+    "readTime": "6 min read",
+    "tags": ["Children", "Pediatric Care", "Family Health"],
+    "featured": false
+  }
+]

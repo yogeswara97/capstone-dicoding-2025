@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pneumonia Awareness - Learn, Prevent, Protect</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .medical-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 50%, #0f172a 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .fade-in-delay-1 { animation-delay: 0.2s; }
+        .fade-in-delay-2 { animation-delay: 0.4s; }
+        .fade-in-delay-3 { animation-delay: 0.6s; }
+        .fade-in-delay-4 { animation-delay: 0.8s; }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        
+        .bg-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        
+        .medical-icon {
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="scroll-smooth">
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center medical-gradient bg-pattern overflow-hidden">
+        <div class="absolute inset-0 bg-black/10"></div>
+        
+        <!-- Floating Medical Icons -->
+        <div class="absolute top-20 left-20 text-white/10 floating">
+            <i class="fas fa-lungs text-6xl"></i>
+        </div>
+        <div class="absolute bottom-20 right-20 text-white/10 floating" style="animation-delay: 1s;">
+            <i class="fas fa-heartbeat text-5xl"></i>
+        </div>
+        <div class="absolute top-1/2 left-10 text-white/10 floating" style="animation-delay: 2s;">
+            <i class="fas fa-stethoscope text-4xl"></i>
+        </div>
+        
+        <div class="relative z-10 text-center max-w-5xl mx-auto px-6">
+            <div class="fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                    Understanding
+                    <span class="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                        Pneumonia
+                    </span>
+                </h1>
+            </div>
+            
+            <div class="fade-in fade-in-delay-1">
+                <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Learn about the causes, symptoms, and prevention of pneumonia to protect yourself and your loved ones
+                </p>
+            </div>
+            
+            <div class="fade-in fade-in-delay-2 flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-blue-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-xl">
+                    <i class="fas fa-play-circle mr-2"></i>
+                    Learn More
+                </button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-blue-900 transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-user-md mr-2"></i>
+                    Find a Doctor
+                </button>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white pulse-slow">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="fade-in">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        What is <span class="text-blue-600">Pneumonia?</span>
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto rounded-full"></div>
+                </div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in fade-in-delay-1">
+                    <div class="bg-white rounded-3xl p-8 shadow-2xl card-hover">
+                        <div class="text-6xl medical-icon mb-6">
+                            <i class="fas fa-lungs"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Lung Infection</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            Pneumonia is an infection that inflames air sacs in one or both lungs. The air sacs may fill with fluid or pus, causing symptoms like cough, fever, chills, and difficulty breathing.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="space-y-6 fade-in fade-in-delay-2">
+                    <div class="bg-white rounded-2xl p-6 shadow-lg card-hover border-l-4 border-blue-500">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-virus text-blue-600"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-900 text-lg">Bacterial Pneumonia</h4>
+                        </div>
+                        <p class="text-gray-600">Most common type, often caused by Streptococcus pneumoniae</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-6 shadow-lg card-hover border-l-4 border-cyan-500">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 bg-cyan-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-microscope text-cyan-600"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-900 text-lg">Viral Pneumonia</h4>
+                        </div>
+                        <p class="text-gray-600">Caused by respiratory viruses like influenza and COVID-19</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-6 shadow-lg card-hover border-l-4 border-purple-500">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-seedling text-purple-600"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-900 text-lg">Fungal Pneumonia</h4>
+                        </div>
+                        <p class="text-gray-600">Less common, typically affects immunocompromised individuals</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Symptoms Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="fade-in">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Recognize the <span class="text-red-500">Symptoms</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Early recognition of pneumonia symptoms can lead to faster treatment and better outcomes
+                    </p>
+                    <div class="w-24 h-1 bg-gradient-to-r from-red-500 to-pink-500 mx-auto rounded-full mt-6"></div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="fade-in card-hover">
+                    <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-3xl p-8 text-center shadow-lg border border-red-100">
+                        <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i class="fas fa-thermometer-half text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-gray-900 mb-3">Fever & Chills</h3>
+                        <p class="text-gray-600">High fever often accompanied by shaking chills</p>
+                    </div>
+                </div>
+                
+                <div class="fade-in fade-in-delay-1 card-hover">
+                    <div class="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-3xl p-8 text-center shadow-lg border border-orange-100">
+                        <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i class="fas fa-lungs text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-gray-900 mb-3">Difficulty Breathing</h3>
+                        <p class="text-gray-600">Shortness of breath and rapid breathing</p>
+                    </div>
+                </div>
+                
+                <div class="fade-in fade-in-delay-2 card-hover">
+                    <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 text-center shadow-lg border border-blue-100">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i class="fas fa-head-side-cough text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-gray-900 mb-3">Persistent Cough</h3>
+                        <p class="text-gray-600">Cough with phlegm or blood-tinged sputum</p>
+                    </div>
+                </div>
+                
+                <div class="fade-in fade-in-delay-3 card-hover">
+                    <div class="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-3xl p-8 text-center shadow-lg border border-purple-100">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <i class="fas fa-tired text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-gray-900 mb-3">Fatigue</h3>
+                        <p class="text-gray-600">Extreme tiredness and weakness</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center fade-in fade-in-delay-4">
+                <div class="bg-red-50 border border-red-200 rounded-2xl p-6 max-w-4xl mx-auto">
+                    <div class="flex items-center justify-center mb-3">
+                        <i class="fas fa-exclamation-triangle text-red-500 text-2xl mr-3"></i>
+                        <h4 class="font-bold text-red-800 text-lg">Seek Immediate Medical Attention</h4>
+                    </div>
+                    <p class="text-red-700">If you experience severe symptoms like difficulty breathing, chest pain, or high fever, contact a healthcare provider immediately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prevention Section -->
+    <section class="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="fade-in">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        <span class="text-green-600">Prevention</span> is Key
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Take these simple steps to reduce your risk of pneumonia and stay healthy
+                    </p>
+                    <div class="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 mx-auto rounded-full mt-6"></div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="fade-in card-hover">
+                    <div class="bg-white rounded-3xl p-8 shadow-xl border border-green-100 h-full">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                            <i class="fas fa-syringe text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-gray-900 mb-4">Get Vaccinated</h3>
+                        <p class="text-gray-600 leading-relaxed">Pneumococcal and flu vaccines can significantly reduce your risk of developing pneumonia.</p>
+                    </div>
+                </div>
+                
+                <div class="fade-in fade-in-delay-1 card-hover">
+                    <div class="bg-white rounded-3xl p-8 shadow-xl border border-blue-100 h-full">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                            <i class="fas fa-hands-wash text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-gray-900 mb-4">Practice Good Hygiene</h3>
+                        <p class="text-gray-600 leading-relaxed">Wash hands frequently, use hand sanitizer, and avoid touching your face with unwashed hands.</p>
+                    </div>
+                </div>
+                
+                <div class="fade-in fade-in-delay-2 card-hover">
+                    <div class="bg-white rounded-3xl p-8 shadow-xl border border-purple-100 h-full">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                            <i class="fas fa-shield-alt text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-gray-900 mb-4">Boost Immunity</h3>
+                        <p class="text-gray-600 leading-relaxed">Maintain a healthy diet, exercise regularly, get adequate sleep, and manage stress levels.</p>
+                    </div>
+                </div>
+                
+                <div class="fade-in fade-in-delay-3 card-hover">
+                    <div class="bg-white rounded-3xl p-8 shadow-xl border border-yellow-100 h-full">
+                        <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                            <i class="fas fa-smoking-ban text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-gray-900 mb-4">Avoid Smoking</h3>
+                        <p class="text-gray-600 leading-relaxed">Smoking damages lung defenses and increases susceptibility to respiratory infections.</p>
+                    </div>
+                </div>
+                
+                <div class="fade-in fade-in-delay-4 card-hover">
+                    <div class="bg-white rounded-3xl p-8 shadow-xl border border-indigo-100 h-full">
+                        <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                            <i class="fas fa-mask text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-gray-900 mb-4">Wear Masks</h3>
+                        <p class="text-gray-600 leading-relaxed">In crowded places or when around sick individuals, wearing masks can prevent transmission.</p>
+                    </div>
+                </div>
+                
+                <div class="fade-in fade-in-delay-4 card-hover">
+                    <div class="bg-white rounded-3xl p-8 shadow-xl border border-teal-100 h-full">
+                        <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-green-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                            <i class="fas fa-home text-white text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-gray-900 mb-4">Stay Home When Sick</h3>
+                        <p class="text-gray-600 leading-relaxed">Rest when ill and avoid contact with others to prevent spreading infections.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 medical-gradient relative overflow-hidden">
+        <div class="absolute inset-0 bg-pattern"></div>
+        <div class="relative z-10 max-w-5xl mx-auto text-center px-6">
+            <div class="fade-in">
+                <h2 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                    Take Action <span class="text-cyan-400">Today</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-blue-100 mb-10 max-w-3xl mx-auto leading-relaxed">
+                    Don't wait for symptoms to worsen. Consult with healthcare professionals and get the care you deserve.
+                </p>
+            </div>
+            
+            <div class="fade-in fade-in-delay-1 flex flex-col sm:flex-row gap-6 justify-center">
+                <button class="bg-white text-blue-900 px-10 py-5 rounded-full font-bold text-xl hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                    <i class="fas fa-calendar-check mr-3"></i>
+                    Schedule Consultation
+                </button>
+                <button class="border-2 border-cyan-400 text-cyan-400 px-10 py-5 rounded-full font-bold text-xl hover:bg-cyan-400 hover:text-blue-900 transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-phone mr-3"></i>
+                    Emergency Hotline
+                </button>
+            </div>
+            
+            <div class="mt-12 fade-in fade-in-delay-2">
+                <p class="text-blue-200 text-lg">
+                    <i class="fas fa-shield-alt mr-2"></i>
+                    Your health is our priority. Get expert medical advice today.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-2">
+                    <h3 class="text-2xl font-bold mb-4 text-cyan-400">
+                        <i class="fas fa-lungs mr-2"></i>
+                        Pneumonia Awareness
+                    </h3>
+                    <p class="text-gray-300 leading-relaxed max-w-md">
+                        Dedicated to educating and empowering individuals with knowledge about pneumonia prevention, symptoms, and treatment options.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-cyan-400 transition-colors">About Pneumonia</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-cyan-400 transition-colors">Symptoms Guide</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-cyan-400 transition-colors">Prevention Tips</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-cyan-400 transition-colors">Find a Doctor</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-300 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-500 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-500 transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2025 Pneumonia Awareness Initiative. All rights reserved. 
+                    <span class="mx-2">|</span>
+                    <a href="#" class="hover:text-cyan-400 transition-colors">Privacy Policy</a>
+                    <span class="mx-2">|</span>
+                    <a href="#" class="hover:text-cyan-400 transition-colors">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements that should animate
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.fade-in, .card-hover');
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Add dynamic hover effects
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Button click effects
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Create ripple effect
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.cssText = `
+                    position: absolute;
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${x}px;
+                    top: ${y}px;
+                    border-radius: 50%;
+                    background: rgba(255,255,255,0.3);
+                    transform: scale(0);
+                    animation: ripple 0.6s linear;
+                    pointer-events: none;
+                `;
+                
+                this.style.position = 'relative';
+                this.style.overflow = 'hidden';
+                this.appendChild(ripple);
+                
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // Add ripple animation CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

@@ -1,18 +1,26 @@
-
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 
-import { Poppins } from "next/font/google";
+import { Montserrat } from "next/font/google";
+import Footer from "@/components/Footer";
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400","500","600","700"] });
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-sans", // langsung override font-sans bawaan Tailwind
+});
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={`${montserrat.variable} font-sans`}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

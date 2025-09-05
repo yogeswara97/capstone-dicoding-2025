@@ -1,14 +1,16 @@
 
 
-import Home from "@/components/Home";
-import Navbar from "@/components/Navbar";
+import ArticleSection from "@/components/Home/ArticlesSection";
+import FeatureSection from "@/components/Home/FeatureSection";
+import HeroSection from "@/components/Home/HeroSection";
 
 
 export default function Page() {
   return (
     <>
-      <Navbar />
-      <Home />
+      <HeroSection />
+      <FeatureSection />
+      <ArticleSection />
     </>
   );
 }
