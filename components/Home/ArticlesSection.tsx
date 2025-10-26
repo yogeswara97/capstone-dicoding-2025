@@ -58,10 +58,11 @@ export default function ArticleSection() {
       </p>
 
       <div className="grid md:grid-cols-3 gap-8 mt-12">
-        {articles.slice(0, 6).map((article) => (
+        {articles.slice(0, 6).map((article, i) => (
           <ArticleCard
             key={article.id}
             article={{ ...article, publishDate: article.publishDate }}
+            index={i}
           />
         ))}
       </div>

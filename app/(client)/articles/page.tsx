@@ -62,8 +62,8 @@ export default function ArticlePage() {
       </p>
 
       <div className="grid md:grid-cols-3 gap-8 mt-12">
-        {articles.slice(0, 12).map((article) => (
-          <ArticleCard key={article.id} article={article} />
+        {articles.slice(0, 12).map((article, i) => (
+          <ArticleCard key={article.id} article={article} index={i}/>
         ))}
       </div>
     </div>

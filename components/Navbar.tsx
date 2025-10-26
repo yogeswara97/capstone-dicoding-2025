@@ -41,7 +41,9 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-2">
-          <FancyButton />
+          <Link href="/predict" className="">
+            <FancyButton />
+          </Link>
         </div>
         {/* Mobile Hamburger */}
         <div className="md:hidden flex items-center gap-2">
